@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>IDF+: An Enhanced Editor for EnergyPlus Input FIles - The Mindful Modeller</title><meta name="description" content="IDF+ is an enhanced editor for EnergyPlus input files. The open source tool includes full undo support, customizable interface and filterable classes."><meta name="twitter:card" content="summary"><meta name="twitter:description" content="IDF+ is an enhanced editor for EnergyPlus input files. The open source tool includes full undo support, customizable interface and filterable classes."><meta name="twitter:title" content="IDF+: An Enhanced Editor for EnergyPlus Input FIles - The Mindful Modeller"><meta name="twitter:site" content="@mindfulmodeller"><meta name="twitter:image" content="https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-300x216.png"><meta name="twitter:creator" content="@mindfulmodeller"><link rel="dns-prefetch" href="//s0.wp.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.1.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://c0.wp.com/c/5.1.1/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><link rel="stylesheet" id="social-logos-css" href="https://c0.wp.com/p/jetpack/7.2.1/_inc/social-logos/social-logos.min.css" type="text/css" media="all"><link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/7.2.1/css/jetpack.css" type="text/css" media="all"><script type="text/javascript" src="https://c0.wp.com/c/5.1.1/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://c0.wp.com/c/5.1.1/wp-includes/js/jquery/jquery-migrate.min.js"></script><link rel="dns-prefetch" href="//v0.wordpress.com"><link rel="dns-prefetch" href="//c0.wp.com"><style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #444;
+		}
+		</style><meta property="og:type" content="article"><meta property="og:title" content="IDF+: An Enhanced Editor for EnergyPlus Input FIles"><meta property="og:url" content="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/"><meta property="og:description" content="In a previous post I set out my “Manifesto for Good Energy Modelling Tools”, in this post I wanted to share an initial public preview of a tool I’ve been working on. The tool is a…"><meta property="article:published_time" content="2014-11-16T01:48:42+00:00"><meta property="article:modified_time" content="2014-11-16T01:58:36+00:00"><meta property="og:site_name" content="The Mindful Modeller"><meta property="og:image" content="https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-300x216.png"><meta property="og:image:secure_url" content="https://i1.wp.com/mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-300x216.png?ssl=1"><meta property="og:image:width" content="300"><meta property="og:image:height" content="216"><meta property="og:image:alt" content="IDF+ Screenshot"><meta name="twitter:creator" content="@mindfulmodeller"><meta name="twitter:site" content="@mindfulmodeller"><meta name="twitter:text:title" content="IDF+: An Enhanced Editor for EnergyPlus Input FIles"><meta name="twitter:image" content="https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-300x216.png"><meta name="twitter:card" content="summary_large_image"></head><body class="post-template-default single single-post postid-276 single-format-standard wp-embed-responsive custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://mindfulmodeller.ca/" title="The Mindful Modeller" rel="home">The Mindful Modeller</a></h1>
+			<h2 class="site-description">Thoughts on Building Energy Modelling, Software, Building Science, Solar Buildings and Environmental Issues</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-nav-menu-container"><ul id="menu-nav-menu" class="nav-menu"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-51"><a href="http://PLACEHOLDER.wpsho/">Home</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://mindfulmodeller.ca/about/">About</a></li>
+<li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-47"><a href="https://mindfulmodeller.ca/category/modelling/">Energy Modelling</a></li>
+<li id="menu-item-359" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-359"><a href="https://mindfulmodeller.ca/category/software_tools/">Software Tools</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-48"><a href="https://mindfulmodeller.ca/category/environment/">Environmental Issues</a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-360"><a href="https://mindfulmodeller.ca/category/site-news/">Site News</a></li>
+</ul></div>		</nav><a href="https://mindfulmodeller.ca/"><img src="https://mindfulmodeller.ca/wp-content/uploads/2013/01/banner.jpg" class="header-image" width="960" height="250" alt="The Mindful Modeller"></a>
+			</header><div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-276" class="post-276 post type-post status-publish format-standard hentry category-modelling category-software_tools"><header class="entry-header"><h1 class="entry-title">IDF+: An Enhanced Editor for EnergyPlus Input FIles</h1>
+										<div class="comments-link">
+					<a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/#comments">4 Replies</a>				</div>
+					</header><div class="entry-content">
+			<div id="attachment_325" style="width: 310px" class="wp-caption alignright"><a href="https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot.png"><img aria-describedby="caption-attachment-325" class="wp-image-325 size-medium" title="IDF+ Screenshot" src="https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-300x216.png" alt="IDF+ Screenshot" width="300" height="216" srcset="https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-300x216.png 300w,https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-1024x740.png 1024w,https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot-624x451.png 624w,https://mindfulmodeller.ca/wp-content/uploads/2014/11/idfplusscreenshot.png 1396w" sizes="(max-width: 300px) 100vw, 300px"></a><p id="caption-attachment-325" class="wp-caption-text">IDF+ Screenshot</p></div>
+<p class="entry-title">In a previous post I set out my “<a title="Manifesto for Good Energy Modelling Tools" href="https://mindfulmodeller.ca/manifesto-good-energy-modelling-tools/">Manifesto for Good Energy Modelling Tools</a>“, in this post I wanted to share an initial public preview of a tool I’ve been working on. The tool is an enhanced editor for EnergyPlus idf files. In creating the tool, I’ve attempted to embrace the concepts in the manifesto (rather, I discovered and developed the concepts as I created the tool). I use the official IDF Editor that comes with EnergyPlus every day—it is the primary tool I use for interacting with IDF files. I have come to respect it and think it is probably the best tool out there right now for working with IDF tools, however, it also has some significant limitations that I decided to address. The working name I’ve chosen is IDF+, but I am hoping to find something a bit more original as development progresses (suggestions are welcome!).<span id="more-276"></span></p>
+<h2>Open Source and Cross Platform</h2>
+<p>The tool is written in Python and the source code is available under an open source licence at the BitBucket repository. It is currently working on both Ubuntu Linux and Windows, but will eventually work on Mac OS as well.</p>
+<h2>Lightweight But Enhanced Editor for EnergyPlus</h2>
+<p>The tool continues in the spirit of the official editor in that it’s a lightweight tool that interacts as directly as possible with the contents of the IDF files.</p>
+<h2>Full Undo Support</h2>
+<p>All primary editing features support undo. This includes cut, copy, paste, delete and duplicate. The undo history can be navigated allowing a user to return to previous points in the model’s recent history (within the given editing session).</p>
+<h2>Filter and Transpose</h2>
+<p>Both the list of classes and objects are search/filterable. This means a user can show only objects or classes containing arbitrary bits of text. The editing actions can then be performed on this subset of objects. The object list can also be transposed (rows/columns reversed) to show a more traditional spreadsheet-like view.</p>
+<h2>Highly Flexible Interface</h2>
+<p>Each of the main interface elements, such as the class list or comments box, can be moved around and resized as a user prefers, or even “undocked” from the main interface altogether to be positioned on a secondary monitor.</p>
+<h2>Future Development</h2>
+<p>On the roadmap are features such as search and replace, visualization of relationships between objects, enhanced contextual menus and help, as well as improvements to speed and visual appearance.</p>
+<h2>Please Try It Out</h2>
+<p>The tool is available <a href="https://bitbucket.org/mattdoiron/idfplus/">on BitBucket</a> now. I should consider it to be alpha stage software, meaning that it is for testing purposes only and should not be used for real projects. I would appreciate any feedback!</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share This:</h3><div class="sd-content"><ul><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-276" class="share-twitter sd-button share-icon" href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-end"></ul></div></div></div>					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://mindfulmodeller.ca/category/modelling/" rel="category tag">Energy Modelling</a>, <a href="https://mindfulmodeller.ca/category/software_tools/" rel="category tag">Software Tools</a> on <a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/" title="5:48 pm" rel="bookmark"><time class="entry-date" datetime="2014-11-15T17:48:42-07:00">November 15, 2014</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://mindfulmodeller.ca/author/matt/" title="View all posts by Matt" rel="author">Matt</a></span></span>.										<div class="author-info">
+					<div class="author-avatar">
+						<img alt="" src="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=68&d=identicon&r=g" srcset="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=136&d=identicon&r=g 2x" class="avatar avatar-68 photo" height="68" width="68"></div>
+					<div class="author-description">
+						<h2>About Matt</h2>
+						<p>Matt is a mechanical/building engineer who specializes in whole-building energy modelling, energy efficiency and solar buildings. He's worked for about 9 years analyzing the energy use patterns of buildings. He studied the energy performance of a low-energy, solar house for his Masters thesis. Matt has experience with EnergyPlus and eQuest.</p>
+						<div class="author-link">
+							<a href="https://mindfulmodeller.ca/author/matt/" rel="author">
+								View all posts by Matt <span class="meta-nav">→</span>							</a>
+						</div>
+					</div>
+				</div>
+					</footer></article><nav class="nav-single"><h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="https://mindfulmodeller.ca/manifesto-good-energy-modelling-tools/" rel="prev"><span class="meta-nav">←</span> Manifesto for Good Energy Modelling Tools</a></span>
+					<span class="nav-next"><a href="https://mindfulmodeller.ca/version-control-for-energy-models/" rel="next">Version Control for Energy Models <span class="meta-nav">→</span></a></span>
+				</nav><div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			4 thoughts on “<span>IDF+: An Enhanced Editor for EnergyPlus Input FIles</span>”		</h2>
+
+		<ol class="commentlist"><li class="comment byuser comment-author-becr6 even thread-even depth-1" id="li-comment-1">
+		<article id="comment-1" class="comment"><header class="comment-meta comment-author vcard"><img alt="" src="https://secure.gravatar.com/avatar/268face28945060c303801d335231a57?s=44&d=identicon&r=g" srcset="https://secure.gravatar.com/avatar/268face28945060c303801d335231a57?s=88&d=identicon&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"><cite><b class="fn">WouterBeck</b> </cite><a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/#comment-1"><time datetime="2015-06-28T05:50:55-07:00">June 28, 2015 at 5:50 am</time></a>				</header><section class="comment-content comment"><p>Dear Matt,</p>
+<p>I tried to open /usr/local/EnergyPlus-8-3-0/ExampleFiles/EquivalentLayerWindow.idf using idfplus.<br>
+This fails and the error message is “Invalid or unknown idf object: SCHEDULE:COMPACT Loading cancelled! “.<br>
+Loading another example idf (I tried 1ZoneEvapCooler.idf) that also has Schedule:Compact objects completes without errors.<br>
+Any idea?</p>
+								</section><div class="reply">
+				<a rel="nofollow" class="comment-reply-login" href="https://mindfulmodeller.ca/wp-login.php">Log in to Reply</a> <span>↓</span>				</div>
+			</article><ol class="children"><li class="comment byuser comment-author-matt bypostauthor odd alt depth-2" id="li-comment-2">
+		<article id="comment-2" class="comment"><header class="comment-meta comment-author vcard"><img alt="" src="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=44&d=identicon&r=g" srcset="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=88&d=identicon&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"><cite><b class="fn"><a href="http://PLACEHOLDER.wpsho" rel="external nofollow" class="url">Matt</a></b> <span>Post author</span></cite><a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/#comment-2"><time datetime="2015-06-28T09:08:49-07:00">June 28, 2015 at 9:08 am</time></a>				</header><section class="comment-content comment"><p>Hi! My first thought is that it could be related to capitalization of the “SCHEDULE:COMPACT”. IDF+ is currently rather rigid in its reading of class names, which causes problems when things are not _exactly_ as they appear in the idd file. I have this on my list of things to fix, but it’s currently annoying. Try a file without caps in the object name and let me know? I have an issue tracked for it and similar issues here: <a href="https://bitbucket.org/mattdoiron/idfplus/issue/26/handle-incorrect-syntax-in-an-idf-file" rel="nofollow">https://bitbucket.org/mattdoiron/idfplus/issue/26/handle-incorrect-syntax-in-an-idf-file</a></p>
+								</section><div class="reply">
+				<a rel="nofollow" class="comment-reply-login" href="https://mindfulmodeller.ca/wp-login.php">Log in to Reply</a> <span>↓</span>				</div>
+			</article><ol class="children"><li class="comment byuser comment-author-becr6 even depth-3" id="li-comment-3">
+		<article id="comment-3" class="comment"><header class="comment-meta comment-author vcard"><img alt="" src="https://secure.gravatar.com/avatar/268face28945060c303801d335231a57?s=44&d=identicon&r=g" srcset="https://secure.gravatar.com/avatar/268face28945060c303801d335231a57?s=88&d=identicon&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"><cite><b class="fn">WouterBeck</b> </cite><a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/#comment-3"><time datetime="2015-06-28T12:28:21-07:00">June 28, 2015 at 12:28 pm</time></a>				</header><section class="comment-content comment"><p>The capitalization is generated by idfplus. The source file EquivalentLayerWindow.idf reads:<br>
+Schedule:Compact,<br>
+    Htg-SetP-Sch,            !- Name<br>
+    Temperature,             !- Schedule Type Limits Name<br>
+… etc.</p>
+<p>1ZoneEvapCooler.idf has a schedule:compact in exactly the same style:<br>
+  Schedule:Compact,<br>
+    System Availability Schedule,  !- Name<br>
+    Any Number,              !- Schedule Type Limits Name<br>
+…<br>
+1ZoneEvapCooler.idf loads without problems. Only thing that’s different are the ScheduleTypeLimits.</p>
+<p>The idd says: “Irregular object.  Does not follow the usual definition for fields.”<br>
+I cannot oversee how that impacts parsing the idf-file.</p>
+								</section><div class="reply">
+				<a rel="nofollow" class="comment-reply-login" href="https://mindfulmodeller.ca/wp-login.php">Log in to Reply</a> <span>↓</span>				</div>
+			</article><ol class="children"><li class="comment byuser comment-author-matt bypostauthor odd alt depth-4" id="li-comment-5">
+		<article id="comment-5" class="comment"><header class="comment-meta comment-author vcard"><img alt="" src="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=44&d=identicon&r=g" srcset="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=88&d=identicon&r=g 2x" class="avatar avatar-44 photo" height="44" width="44"><cite><b class="fn"><a href="http://PLACEHOLDER.wpsho" rel="external nofollow" class="url">Matt</a></b> <span>Post author</span></cite><a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/#comment-5"><time datetime="2015-06-29T22:28:30-07:00">June 29, 2015 at 10:28 pm</time></a>				</header><section class="comment-content comment"><p>A few objects before the “Htg-SetP-Sch” object there is one called “ZONE CONTROL TYPE SCHEDULE”. This one has capitals for the object class name (“SCHEDULE:COMPACT”). When I remove these caps that file loads ok for me. It is definitely a bug that caps matter at all, and I’m working on it, sorry for the inconvenience!</p>
+								</section><div class="reply">
+				<a rel="nofollow" class="comment-reply-login" href="https://mindfulmodeller.ca/wp-login.php">Log in to Reply</a> <span>↓</span>				</div>
+			</article></li>
+</ol></li>
+</ol></li>
+</ol></li>
+		</ol><div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/idfplus-enhanced-editor-for-energyplus-input-files/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://mindfulmodeller.ca/wp-login.php">logged in</a> to post a comment.</p>	</div>
+	
+</div>
+
+			
+		</div>
+	</div>
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Welcome!</h3>			<div class="textwidget"><img src="http://s.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=80" style="float: left; margin:0.5em 0.5em 0.5em 0.0em;">I'm Matt Doiron and this is my blog. I post about building energy modelling, energy efficiency, software, solar buildings and general environmental issues. Please check out the intro post <a href="https://mindfulmodeller.ca/about/">about me</a>.
+
+<a href="https://twitter.com/mindfulmodeller" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @mindfulmodeller</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://mindfulmodeller.ca/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
+			</form></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://mindfulmodeller.ca/version-control-for-energy-models/">Version Control for Energy Models</a>
+											<span class="post-date">May 10, 2015</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/">IDF+: An Enhanced Editor for EnergyPlus Input FIles</a>
+											<span class="post-date">November 15, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/manifesto-good-energy-modelling-tools/">Manifesto for Good Energy Modelling Tools</a>
+											<span class="post-date">October 13, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/applying-programming-tools-techniques-energy-modelling/">Applying Programming Tools & Techniques to Energy Modelling</a>
+											<span class="post-date">August 8, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/new-job-new-city-6000-km/">New Job, New City and 6,000 km</a>
+											<span class="post-date">April 19, 2014</span>
+									</li>
+					</ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://mindfulmodeller.ca/2015/05/">May 2015</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/11/">November 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/10/">October 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/08/">August 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/04/">April 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/06/">June 2013</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/03/">March 2013</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/01/">January 2013</a></li>
+		</ul></aside><aside id="blog_subscription-2" class="widget widget_blog_subscription jetpack_subscription_widget"><h3 class="widget-title">Subscribe to Blog via Email</h3>
+            <form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				                    <div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div><p>Join 43 other subscribers</p>
+                    <p id="subscribe-email">
+                        <label id="jetpack-subscribe-label" class="screen-reader-text" for="subscribe-field-blog_subscription-2">
+							Email Address                        </label>
+                        <input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address"></p>
+
+                    <p id="subscribe-submit">
+                        <input type="hidden" name="action" value="subscribe"><input type="hidden" name="source" value="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/"><input type="hidden" name="sub-type" value="widget"><input type="hidden" name="redirect_fragment" value="blog_subscription-2"><button type="submit" name="jetpack_subscriptions_widget">
+	                        Subscribe                        </button>
+                    </p>
+				            </form>
+		
+</aside><aside id="custommetawidget-2" class="widget customMetaWidget"><h3 class="widget-title">Links</h3>		<ul><li><a rel="nofollow" href="https://mindfulmodeller.ca/wp-login.php">Log in</a></li>
+		
+					<li><a href="https://mindfulmodeller.ca/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+		
+
+		
+			<li><a href="https://mindfulmodeller.ca/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+		
+				</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://en-ca.wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/mindfulmodeller.ca\/idfplus-enhanced-editor-for-energyplus-input-files\/":276};
+	</script><script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201915"></script><script type="text/javascript" src="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/js/navigation.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script><script type="text/javascript" src="https://c0.wp.com/p/jetpack/7.2.1/_inc/build/sharedaddy/sharing.min.js"></script><script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script><script type="text/javascript" src="https://stats.wp.com/e-201915.js" async="async" defer></script><script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.2.1',blog:'44886349',post:'276',tz:'-7',srv:'mindfulmodeller.ca'} ]);
+	_stq.push([ 'clickTrackerInit', '44886349', '276' ]);
+</script></body></html>

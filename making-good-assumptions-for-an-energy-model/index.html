@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>Making Good Assumptions For an Energy Model - The Mindful Modeller</title><meta name="description" content="Making good assumptions ones can mean the difference between a good energy model and a bad one. How can so many unknowns be filled in?"><meta name="twitter:card" content="summary"><meta name="twitter:description" content="Making good assumptions ones can mean the difference between a good energy model and a bad one. How can so many unknowns be filled in?"><meta name="twitter:title" content="Making Good Assumptions For an Energy Model - The Mindful Modeller"><meta name="twitter:site" content="@mindfulmodeller"><meta name="twitter:creator" content="@mindfulmodeller"><link rel="dns-prefetch" href="//s0.wp.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.1.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://c0.wp.com/c/5.1.1/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><link rel="stylesheet" id="social-logos-css" href="https://c0.wp.com/p/jetpack/7.2.1/_inc/social-logos/social-logos.min.css" type="text/css" media="all"><link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/7.2.1/css/jetpack.css" type="text/css" media="all"><script type="text/javascript" src="https://c0.wp.com/c/5.1.1/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://c0.wp.com/c/5.1.1/wp-includes/js/jquery/jquery-migrate.min.js"></script><link rel="dns-prefetch" href="//v0.wordpress.com"><link rel="dns-prefetch" href="//c0.wp.com"><style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #444;
+		}
+		</style><meta property="og:type" content="article"><meta property="og:title" content="Making Good Assumptions For an Energy Model"><meta property="og:url" content="https://mindfulmodeller.ca/making-good-assumptions-for-an-energy-model/"><meta property="og:description" content="Modelling an existing building has unique challenges. In some ways it can be easier than modelling a building that doesn’t exist yet because everything is fixed – there is no architect,…"><meta property="article:published_time" content="2013-01-14T12:00:05+00:00"><meta property="article:modified_time" content="2013-01-15T03:43:38+00:00"><meta property="og:site_name" content="The Mindful Modeller"><meta property="og:image" content="https://s0.wp.com/i/blank.jpg"><meta name="twitter:site" content="@mindfulmodeller"><meta name="twitter:text:title" content="Making Good Assumptions For an Energy Model"><meta name="twitter:card" content="summary"></head><body class="post-template-default single single-post postid-125 single-format-standard wp-embed-responsive custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://mindfulmodeller.ca/" title="The Mindful Modeller" rel="home">The Mindful Modeller</a></h1>
+			<h2 class="site-description">Thoughts on Building Energy Modelling, Software, Building Science, Solar Buildings and Environmental Issues</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-nav-menu-container"><ul id="menu-nav-menu" class="nav-menu"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-51"><a href="http://PLACEHOLDER.wpsho/">Home</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://mindfulmodeller.ca/about/">About</a></li>
+<li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-47"><a href="https://mindfulmodeller.ca/category/modelling/">Energy Modelling</a></li>
+<li id="menu-item-359" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-359"><a href="https://mindfulmodeller.ca/category/software_tools/">Software Tools</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-48"><a href="https://mindfulmodeller.ca/category/environment/">Environmental Issues</a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-360"><a href="https://mindfulmodeller.ca/category/site-news/">Site News</a></li>
+</ul></div>		</nav><a href="https://mindfulmodeller.ca/"><img src="https://mindfulmodeller.ca/wp-content/uploads/2013/01/banner.jpg" class="header-image" width="960" height="250" alt="The Mindful Modeller"></a>
+			</header><div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-125" class="post-125 post type-post status-publish format-standard hentry category-modelling"><header class="entry-header"><h1 class="entry-title">Making Good Assumptions For an Energy Model</h1>
+										<div class="comments-link">
+					<a href="https://mindfulmodeller.ca/making-good-assumptions-for-an-energy-model/#respond"><span class="leave-reply">Leave a Reply</span></a>				</div>
+					</header><div class="entry-content">
+			<p>Modelling an existing building has unique challenges. In some ways it can be easier than modelling a building that doesn’t exist yet because everything is fixed – there is no architect, engineer or owner to make last minute changes. Other aspects are more difficult, however, because reality is often “messy” and full of unknowns. No matter how detailed an audit is performed or how many piles of drawings are available, there will always be significant information missing. It’s not just simple quantities like the insulating value in a wall either. It can sometimes be complicated values such as the cycle times and loading of compressors, pumps or other equipment. This requires making assumptions and modelling based on these assumptions. The outputs of the model are dependent on the assumptions input, so making good assumptions can mean the difference between a model that fulfils its purpose and one that doesn’t. A model for a large building can involve dozens of assumptions – how can so many unknowns be filled in reliably?</p>
+<p><span id="more-125"></span></p>
+<h2>Types of Assumptions</h2>
+<p>Before we go deeper into the question of how to make good assumptions, it would be useful to understand what types of assumptions are often required. This will vary from building to building, of course, but some types of information tend to be missing more often than others.</p>
+<ul><li><strong>Wall Insulation/Window Properties:</strong> In many cases, drawings will not exist for a building. They may have been lost, damaged or were never passed on to a new owner. Most audits do not involve tearing open walls to determine wall construction either, so the layers of a building envelope and their respective properties are often unknown.</li>
+<li><strong>Schedules:</strong> The occupancy patterns of a building are difficult to determine and lighting use is not always easily quantifiable.</li>
+<li><strong>Equipment Runtimes:</strong> The runtimes or cycle times of equipment cannot always be determined easily.</li>
+<li><strong>Plug Loads:</strong> The plug loads or receptacle loads in a building vary wildly and are very difficult to quantify.</li>
+</ul><h2>Reduce the Number of Assumptions Required</h2>
+<p>The first step is to reduce the number of assumptions that are actually required. This is done by ensuring as detailed an audit as time and budget allow, as well as making sure the essential documentation is collected. This can include appropriate (and up-to-date) construction drawings, detailed control sequences (including schedules) and notes from interviews with site operations personnel.</p>
+<p>If information cannot be gathered on site, take advantage of sales people, contractors or other industry contacts. For example, the local Carrier sales rep will most likely know the types of compressors typically installed in their units, even if the nameplate has worn away. With good preparation and planning, many assumptions can be avoided altogether.</p>
+<h2>Prioritize Impact</h2>
+<p>Once you’ve eliminated as many assumptions as possible, next you should figure out which assumptions will have the most significant impact on your model. This will vary according to the <em>purpose</em> of your model and is difficult to generalize. If you are primarily interesting in modelling the domestic hot water systems, for example, you will not be as concerned with the insulating value of the walls. Focus your time on the assumptions that most significantly affect your application of the model.</p>
+<h2>Standards, Rules of Thumb and Past Experience</h2>
+<p>This is where the real assumptions are made. Many values have rules of thumb used in the engineering or construction world and these may be used if no other source of information is available. The better approach is to use past experience, but this requires, well… experience. If a past project had a specific piece of equipment and it had good runtime logs, you can try to judge the similarity of your current project in order to make a qualitative comparison. Then use this comparison to make an assumption about the current project.</p>
+<p>Another source of information are various standards and other publications. For example <a title="Office of Energy Efficiency" href="http://oee.nrcan.gc.ca/home" target="_blank">Canada’s Office of Energy Efficiency</a> has significant data on the typical energy use of various appliances. Product manufacturers may also publish rated energy consumption at nominal values which can be adjusted for the given conditions. Product sales reps can also be useful at this stage as they may be able to give insight on the detailed inner workings of their product.</p>
+<p>Insights into the approach for choosing values can also be described by the following quote:</p>
+<blockquote><p><em>If you eliminate the impossible, whatever remains, however improbable, must be the truth. – </em>Spock</p></blockquote>
+<p>Through a process of elimination, then, unreasonable values can be discarded leaving only a relatively small number of potential values. This quote brings up an important thing to understand about existing buildings – most buildings are broken in some way! Through a combination of errors in design, construction, maintenance and user behaviour, there will <em>always</em> be something that behaves differently than you think it “should”. Did the maintenance guy override the control system so that it only <em>looks</em> like that pump is off at night? Are occupants leaving windows open constantly? Is that outdoor air damper locked closed in an occupied building – against code? Any number of strange, unpredictable and sometimes just plain wrong situations can be found in real, existing buildings. So, after you’ve eliminated the impossible, whatever is left has to be the truth no matter how strange it may be. Experience and detailed detective work will help make this process of elimination easier.</p>
+<h2>Calibrate and Iterate</h2>
+<p>Once the model is ready, it must be calibrated/validated. This involves comparing the predicted energy use of the building to actual energy use data. If the modelled and actual energy use are not close enough (what defines close enough is a topic for another discussion) the model will need to be adjusted. The ways in which the model differs from the actual data will give clues as to how to change the model and this may indicate that one or more of your assumptions was incorrect. This process is iterative and many alternate assumptions may be required before the final numbers are accepted. This process will also <em>reinforce</em> some assumptions and can help to confirm that a particularly strange behaviour is occurring as your suspected.</p>
+<h2>Closing Words on Good Assumptions</h2>
+<p>One last piece of advice is to <em>document</em> and <em>report</em> all the assumptions you make. Clients will sometimes require this, but even if they don’t it’s good practice for several reasons. First, you may leave a project on the back burner for a while then wonder what your were thinking when you take a fresh look at a strange value. Also, another modeller may take over and not understand why you chose the values you did.</p>
+<p>Your model may appear to have a thousand unknowns, but by following the basic process outlined here you should be able to eliminate many of them, then use all the resources at your disposal, and the process of elimination, to make good assumptions. The better the inputs of a model, the better the outputs and more useful the results!</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share This:</h3><div class="sd-content"><ul><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://mindfulmodeller.ca/making-good-assumptions-for-an-energy-model/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-125" class="share-twitter sd-button share-icon" href="https://mindfulmodeller.ca/making-good-assumptions-for-an-energy-model/" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-end"></ul></div></div></div>					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://mindfulmodeller.ca/category/modelling/" rel="category tag">Energy Modelling</a> on <a href="https://mindfulmodeller.ca/making-good-assumptions-for-an-energy-model/" title="8:00 am" rel="bookmark"><time class="entry-date" datetime="2013-01-14T08:00:05-07:00">January 14, 2013</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://mindfulmodeller.ca/author/matt/" title="View all posts by Matt" rel="author">Matt</a></span></span>.										<div class="author-info">
+					<div class="author-avatar">
+						<img alt="" src="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=68&d=identicon&r=g" srcset="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=136&d=identicon&r=g 2x" class="avatar avatar-68 photo" height="68" width="68"></div>
+					<div class="author-description">
+						<h2>About Matt</h2>
+						<p>Matt is a mechanical/building engineer who specializes in whole-building energy modelling, energy efficiency and solar buildings. He's worked for about 9 years analyzing the energy use patterns of buildings. He studied the energy performance of a low-energy, solar house for his Masters thesis. Matt has experience with EnergyPlus and eQuest.</p>
+						<div class="author-link">
+							<a href="https://mindfulmodeller.ca/author/matt/" rel="author">
+								View all posts by Matt <span class="meta-nav">→</span>							</a>
+						</div>
+					</div>
+				</div>
+					</footer></article><nav class="nav-single"><h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="https://mindfulmodeller.ca/air-sealing-is-good-but-dont-forget-the-hrv/" rel="prev"><span class="meta-nav">←</span> Air-sealing is Good, But Don’t Forget The HRV!</a></span>
+					<span class="nav-next"><a href="https://mindfulmodeller.ca/adventures-in-leed-energy-modelling/" rel="next">Adventures in LEED Energy Modelling <span class="meta-nav">→</span></a></span>
+				</nav><div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/making-good-assumptions-for-an-energy-model/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://mindfulmodeller.ca/wp-login.php">logged in</a> to post a comment.</p>	</div>
+	
+</div>
+
+			
+		</div>
+	</div>
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Welcome!</h3>			<div class="textwidget"><img src="http://s.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=80" style="float: left; margin:0.5em 0.5em 0.5em 0.0em;">I'm Matt Doiron and this is my blog. I post about building energy modelling, energy efficiency, software, solar buildings and general environmental issues. Please check out the intro post <a href="https://mindfulmodeller.ca/about/">about me</a>.
+
+<a href="https://twitter.com/mindfulmodeller" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @mindfulmodeller</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://mindfulmodeller.ca/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
+			</form></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://mindfulmodeller.ca/version-control-for-energy-models/">Version Control for Energy Models</a>
+											<span class="post-date">May 10, 2015</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/">IDF+: An Enhanced Editor for EnergyPlus Input FIles</a>
+											<span class="post-date">November 15, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/manifesto-good-energy-modelling-tools/">Manifesto for Good Energy Modelling Tools</a>
+											<span class="post-date">October 13, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/applying-programming-tools-techniques-energy-modelling/">Applying Programming Tools & Techniques to Energy Modelling</a>
+											<span class="post-date">August 8, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/new-job-new-city-6000-km/">New Job, New City and 6,000 km</a>
+											<span class="post-date">April 19, 2014</span>
+									</li>
+					</ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://mindfulmodeller.ca/2015/05/">May 2015</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/11/">November 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/10/">October 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/08/">August 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/04/">April 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/06/">June 2013</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/03/">March 2013</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/01/">January 2013</a></li>
+		</ul></aside><aside id="blog_subscription-2" class="widget widget_blog_subscription jetpack_subscription_widget"><h3 class="widget-title">Subscribe to Blog via Email</h3>
+            <form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				                    <div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div><p>Join 43 other subscribers</p>
+                    <p id="subscribe-email">
+                        <label id="jetpack-subscribe-label" class="screen-reader-text" for="subscribe-field-blog_subscription-2">
+							Email Address                        </label>
+                        <input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address"></p>
+
+                    <p id="subscribe-submit">
+                        <input type="hidden" name="action" value="subscribe"><input type="hidden" name="source" value="https://mindfulmodeller.ca/making-good-assumptions-for-an-energy-model/"><input type="hidden" name="sub-type" value="widget"><input type="hidden" name="redirect_fragment" value="blog_subscription-2"><button type="submit" name="jetpack_subscriptions_widget">
+	                        Subscribe                        </button>
+                    </p>
+				            </form>
+		
+</aside><aside id="custommetawidget-2" class="widget customMetaWidget"><h3 class="widget-title">Links</h3>		<ul><li><a rel="nofollow" href="https://mindfulmodeller.ca/wp-login.php">Log in</a></li>
+		
+					<li><a href="https://mindfulmodeller.ca/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+		
+
+		
+			<li><a href="https://mindfulmodeller.ca/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+		
+				</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://en-ca.wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/mindfulmodeller.ca\/making-good-assumptions-for-an-energy-model\/":125};
+	</script><script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201915"></script><script type="text/javascript" src="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/js/navigation.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script><script type="text/javascript" src="https://c0.wp.com/p/jetpack/7.2.1/_inc/build/sharedaddy/sharing.min.js"></script><script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script><script type="text/javascript" src="https://stats.wp.com/e-201915.js" async="async" defer></script><script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.2.1',blog:'44886349',post:'125',tz:'-7',srv:'mindfulmodeller.ca'} ]);
+	_stq.push([ 'clickTrackerInit', '44886349', '125' ]);
+</script></body></html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-CA"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><title>Version Control for Energy Models - The Mindful Modeller</title><meta name="description" content="The pros and cons for using version control for energy models."><meta name="twitter:card" content="summary"><meta name="twitter:description" content="The pros and cons for using version control for energy models."><meta name="twitter:title" content="Version Control for Energy Models - The Mindful Modeller"><meta name="twitter:site" content="@mindfulmodeller"><meta name="twitter:image" content="https://mindfulmodeller.ca/wp-content/uploads/2015/05/workflow1.png"><meta name="twitter:creator" content="@mindfulmodeller"><link rel="dns-prefetch" href="//s0.wp.com"><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link href="https://fonts.gstatic.com" crossorigin rel="preconnect"><link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.1.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all"><link rel="stylesheet" id="wp-block-library-theme-css" href="https://c0.wp.com/c/5.1.1/wp-includes/css/dist/block-library/theme.min.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-fonts-css" href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&subset=latin,latin-ext" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-style-css" href="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/style.css" type="text/css" media="all"><link rel="stylesheet" id="twentytwelve-block-style-css" href="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/css/blocks.css" type="text/css" media="all"><link rel="stylesheet" id="social-logos-css" href="https://c0.wp.com/p/jetpack/7.2.1/_inc/social-logos/social-logos.min.css" type="text/css" media="all"><link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/7.2.1/css/jetpack.css" type="text/css" media="all"><script type="text/javascript" src="https://c0.wp.com/c/5.1.1/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://c0.wp.com/c/5.1.1/wp-includes/js/jquery/jquery-migrate.min.js"></script><link rel="dns-prefetch" href="//v0.wordpress.com"><link rel="dns-prefetch" href="//c0.wp.com"><style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #444;
+		}
+		</style><meta property="og:type" content="article"><meta property="og:title" content="Version Control for Energy Models"><meta property="og:url" content="https://mindfulmodeller.ca/version-control-for-energy-models/"><meta property="og:description" content="I mentioned in a previous post that I was experimenting with version control for energy models in my daily work. I’ve been using Mercurial and TortoiseHG ever since and I’ve learned a s…"><meta property="article:published_time" content="2015-05-11T03:24:54+00:00"><meta property="article:modified_time" content="2015-05-11T03:53:22+00:00"><meta property="og:site_name" content="The Mindful Modeller"><meta property="og:image" content="https://mindfulmodeller.ca/wp-content/uploads/2015/05/workflow1.png"><meta property="og:image:width" content="574"><meta property="og:image:height" content="342"><meta property="og:image:alt" content="Version Control Workflow Example"><meta name="twitter:creator" content="@mindfulmodeller"><meta name="twitter:site" content="@mindfulmodeller"><meta name="twitter:text:title" content="Version Control for Energy Models"><meta name="twitter:card" content="summary"></head><body class="post-template-default single single-post postid-343 single-format-standard wp-embed-responsive custom-font-enabled">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner"><hgroup><h1 class="site-title"><a href="https://mindfulmodeller.ca/" title="The Mindful Modeller" rel="home">The Mindful Modeller</a></h1>
+			<h2 class="site-description">Thoughts on Building Energy Modelling, Software, Building Science, Solar Buildings and Environmental Issues</h2>
+		</hgroup><nav id="site-navigation" class="main-navigation" role="navigation"><button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-nav-menu-container"><ul id="menu-nav-menu" class="nav-menu"><li id="menu-item-51" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-51"><a href="http://PLACEHOLDER.wpsho/">Home</a></li>
+<li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://mindfulmodeller.ca/about/">About</a></li>
+<li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-47"><a href="https://mindfulmodeller.ca/category/modelling/">Energy Modelling</a></li>
+<li id="menu-item-359" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-359"><a href="https://mindfulmodeller.ca/category/software_tools/">Software Tools</a></li>
+<li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-48"><a href="https://mindfulmodeller.ca/category/environment/">Environmental Issues</a></li>
+<li id="menu-item-360" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-360"><a href="https://mindfulmodeller.ca/category/site-news/">Site News</a></li>
+</ul></div>		</nav><a href="https://mindfulmodeller.ca/"><img src="https://mindfulmodeller.ca/wp-content/uploads/2013/01/banner.jpg" class="header-image" width="960" height="250" alt="The Mindful Modeller"></a>
+			</header><div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-343" class="post-343 post type-post status-publish format-standard hentry category-modelling category-software_tools"><header class="entry-header"><h1 class="entry-title">Version Control for Energy Models</h1>
+										<div class="comments-link">
+					<a href="https://mindfulmodeller.ca/version-control-for-energy-models/#respond"><span class="leave-reply">Leave a Reply</span></a>				</div>
+					</header><div class="entry-content">
+			<p>I mentioned in a <a title="Applying Programming Tools & Techniques to Energy Modelling" href="https://mindfulmodeller.ca/applying-programming-tools-techniques-energy-modelling/" target="_blank">previous post</a> that I was experimenting with <a href="http://en.wikipedia.org/wiki/Revision_control" target="_blank">version control</a> for energy models in my daily work. I’ve been using <a href="http://mercurial.selenic.com/" target="_blank">Mercurial</a> and <a href="http://tortoisehg.bitbucket.org/" target="_blank">TortoiseHG</a> ever since and I’ve learned a significant amount about how version control tools can be useful in energy modelling. In this post I describe in more detail my own version control workflow, and its pros and cons.<span id="more-343"></span></p>
+<p>For those who are not familiar with version control systems (VCS), sometimes called source code management or revision control tools, at their basic level, these tools allow tracking, organizing and manipulating versioned plain text files. Software developers use these tools to keep track of who made what change to software source code when, as well as to “merge” and “branch” documents as different options are tested. Each version is “committed” to the “repository” with a “commit message” describing the changes being committed. The repository contains all versions of all files in a space-efficient way—only the differences between files are stored. Any version of any file (or set of files) can be retrieved at any time. All versions of all files and commit messages are searchable.</p>
+<p>These features make VCS tools extremely interesting for energy modelling as well. All our files are plain text and modellers also make large numbers of changes which can be a challenge to keep track of. The two most popular tools are Git and Mercurial. I personally find Mercurial to be more intuitive, so this is what I’ve been using, but this will be subjective and ultimately both tools can achieve the same goals.</p>
+<h1>Comparison of Workflows</h1>
+<p>To really illustrate the power of VCS tools I wanted to describe a typical modelling workflow with and without a VCS tool.</p>
+<h3>Current Energy Modelling Workflow</h3>
+<ol><li>Create initial osm and sketchup files, creating several versions as we go because osm files are easily corrupted. Versions R1, R2 and R3 are created.</li>
+<li>Export initial idf file. Make changes, saving copies of the file as we go. These versions get us up to R5.</li>
+<li>Decide to change the window-to-wall ratio so we update the osm file to R4 then merge the new geometry into the idf file making version R6. Note that now the R4 version of the osm file is <em>newer</em> than the R4 and R5 versions of the idf file (confusing!).</li>
+<li>Make a few more changes to the idf file, bringing us to R8.</li>
+<li>Write a memo describing preliminary results using the R8 energy model and send this to the client.</li>
+<li>Make more changes while waiting for the client’s review and save versions R9 and R10.</li>
+<li>Client asks to know what the impact of several specific changes. To keep the results consistent with the memo the client is reviewing, we need to make changes to the version used for the memo. Hopefully we will remember that this is version R8. Save this version as R8a.</li>
+<li>Make a few more changes while the client decides whether to keep the optional changes, creating revisions R11 and R12.</li>
+<li>The client asks to keep the changes made after the memo. We must now remember which file contained the changes (R8a) and manually incorporate these into R12, making R13.</li>
+</ol><p>As you can see, this whole process gets confusing very quickly and gets even worse when working on a large, multi-building project or when evaluating various options at once.</p>
+<h3>Version Control Workflow</h3>
+<ol><li>Create initial osm and sketchup files. Commit changes to these as we work and commit each one with a very brief comment. If any corruption occurs with the osm we can easily revert to a previous version using the commit messages to identify the version to which we are restoring.</li>
+<li>Export initial idf file. Make changes and commit each change with a comment.</li>
+<li>Decide to change the window-to-wall ratio so we update the osm file and commit changes with a short note.</li>
+<li>Copy new windows into the idf file and commit the changes with a comment.</li>
+<li>Make a few more changes and commit each with a comment.</li>
+<li>Write a memo describing preliminary results using the current version of the model and send this to the client. Tag this version as “prelim_memo” so that we will be able to find it again easily.</li>
+<li>Make more changes while waiting for the client’s review and commit each with a comment.</li>
+<li>Client asks to know what the impact of several specific changes. To keep the results consistent with the memo the client is reviewing, we need to make changes to the version used for the memo. Use the “update” feature to update our working directory to the version tagged “prelim_memo”. All our files are now in the exact state they were when re issued the memo. Make the changes and commit the changes. This creates a new “branch” and we will “bookmark” this branch “option1”.</li>
+<li>Update to the main branch and make a few more changes while the client decides whether to keep the optional changes. Commit the changes with comments.</li>
+<li>The client asks to keep the changes made after the memo. We can now “merge” the “option1” branch into the main branch incorporating the changes into the most recent version of our model.</li>
+</ol><p>This process can also be a bit confusing without some background in version control systems, however, it is also clear that everything is tracked with almost every step involving “commit messages”. These messages are a key part of the advantages to this workflow.</p>
+<h1>Visually Tracking Model History</h1>
+<p>The above examples can be a bit confusing, even for seasoned energy modellers, but we often have to deal with far more complex sets of options. The commit messages and visual “graph log” can help us track the various revisions made to a file. What does this actually look like in TortoiseHG? I created a simple example and a screenshot of the repository can be seen below:</p>
+<div id="attachment_354" style="width: 584px" class="wp-caption alignnone"><a href="https://mindfulmodeller.ca/wp-content/uploads/2015/05/workflow1.png"><img aria-describedby="caption-attachment-354" class="size-full wp-image-354" src="https://mindfulmodeller.ca/wp-content/uploads/2015/05/workflow1.png" alt="Version Control Workflow Example" width="574" height="342" srcset="https://mindfulmodeller.ca/wp-content/uploads/2015/05/workflow1.png 574w,https://mindfulmodeller.ca/wp-content/uploads/2015/05/workflow1-300x179.png 300w" sizes="(max-width: 574px) 100vw, 574px"></a><p id="caption-attachment-354" class="wp-caption-text">Version Control Workflow Example</p></div>
+<p>The “Graph” column is a very useful to see the progress of the model and although the commit messages in this example are very generic, they are still useful. In a real project the modeller could use simple messages like this or there could be be many, many more revisions, each with a more detailed commit message.</p>
+<h1>Advantages</h1>
+<ul><li>Lets you “try something” without worrying about messing something up – all versions are stored and retrievable.</li>
+<li>Allows you to “branch” your model into different versions when significant scenarios are being examined</li>
+<li>Allows tagging versions such as “these results issued to client” or simply the old R1, R2, tags if desired.</li>
+<li>Each change committed is accompanied by a “Commit message” which allows tracking train of thought in your modelling process, documenting changes, reasons, etc.</li>
+<li>“Changesets” can be examined, showing only the specific changes made between versions. This is useful to answer questions like “what did I change since this system stopped working?”.</li>
+<li>Commit messages are searchable and time-stamped. Find when you made a change mentioning arbitrary terms like “huidification” or “boiler”.</li>
+<li>All versions of all files in the repository are searchable at once.</li>
+</ul><h1>Disadvantages</h1>
+<ul><li>Complicated: This system has a steep learning curve, especially without a background in related concepts, i.e. software development.</li>
+<li>Keeping a copy on the server can be annoying. The whole repository should be kept there for backup purposes (depending on your company’s IT policies), but needs to be synced.</li>
+<li>Comparing results of models from different “versions” or “branches” can get complicated. Only one “state” can exist in a folder at a time. If you want to see multiple versions at once it can be a challenge.</li>
+</ul><h1>Conclusion</h1>
+<p>Overall I’m convinced that the version control workflow is worth using, there are still some kinks to work out and the learning curve makes it difficult to simply say “everyone should use it”. However, many full-fledged energy modelling tools also have a steep learning curve so if you can learn the energy modelling tool itself, you can learn this too! I hope to write a future post about the details of setting up a repository for energy modelling purposes.</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share This:</h3><div class="sd-content"><ul><li class="share-print"><a rel="nofollow noopener noreferrer" data-shared="" class="share-print sd-button share-icon" href="https://mindfulmodeller.ca/version-control-for-energy-models/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-343" class="share-twitter sd-button share-icon" href="https://mindfulmodeller.ca/version-control-for-energy-models/" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-end"></ul></div></div></div>					</div>
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="https://mindfulmodeller.ca/category/modelling/" rel="category tag">Energy Modelling</a>, <a href="https://mindfulmodeller.ca/category/software_tools/" rel="category tag">Software Tools</a> on <a href="https://mindfulmodeller.ca/version-control-for-energy-models/" title="8:24 pm" rel="bookmark"><time class="entry-date" datetime="2015-05-10T20:24:54-07:00">May 10, 2015</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="https://mindfulmodeller.ca/author/matt/" title="View all posts by Matt" rel="author">Matt</a></span></span>.										<div class="author-info">
+					<div class="author-avatar">
+						<img alt="" src="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=68&d=identicon&r=g" srcset="https://secure.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=136&d=identicon&r=g 2x" class="avatar avatar-68 photo" height="68" width="68"></div>
+					<div class="author-description">
+						<h2>About Matt</h2>
+						<p>Matt is a mechanical/building engineer who specializes in whole-building energy modelling, energy efficiency and solar buildings. He's worked for about 9 years analyzing the energy use patterns of buildings. He studied the energy performance of a low-energy, solar house for his Masters thesis. Matt has experience with EnergyPlus and eQuest.</p>
+						<div class="author-link">
+							<a href="https://mindfulmodeller.ca/author/matt/" rel="author">
+								View all posts by Matt <span class="meta-nav">→</span>							</a>
+						</div>
+					</div>
+				</div>
+					</footer></article><nav class="nav-single"><h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/" rel="prev"><span class="meta-nav">←</span> IDF+: An Enhanced Editor for EnergyPlus Input FIles</a></span>
+					<span class="nav-next"></span>
+				</nav><div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/version-control-for-energy-models/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="https://mindfulmodeller.ca/wp-login.php">logged in</a> to post a comment.</p>	</div>
+	
+</div>
+
+			
+		</div>
+	</div>
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="text-2" class="widget widget_text"><h3 class="widget-title">Welcome!</h3>			<div class="textwidget"><img src="http://s.gravatar.com/avatar/701e43154a90aceea4be0e89384ab55d?s=80" style="float: left; margin:0.5em 0.5em 0.5em 0.0em;">I'm Matt Doiron and this is my blog. I post about building energy modelling, energy efficiency, software, solar buildings and general environmental issues. Please check out the intro post <a href="https://mindfulmodeller.ca/about/">about me</a>.
+
+<a href="https://twitter.com/mindfulmodeller" class="twitter-follow-button" data-show-count="false" data-dnt="true">Follow @mindfulmodeller</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+		</aside><aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://mindfulmodeller.ca/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s"><input type="submit" id="searchsubmit" value="Search"></div>
+			</form></aside><aside id="recent-posts-2" class="widget widget_recent_entries"><h3 class="widget-title">Recent Posts</h3>		<ul><li>
+					<a href="https://mindfulmodeller.ca/version-control-for-energy-models/">Version Control for Energy Models</a>
+											<span class="post-date">May 10, 2015</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/idfplus-enhanced-editor-for-energyplus-input-files/">IDF+: An Enhanced Editor for EnergyPlus Input FIles</a>
+											<span class="post-date">November 15, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/manifesto-good-energy-modelling-tools/">Manifesto for Good Energy Modelling Tools</a>
+											<span class="post-date">October 13, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/applying-programming-tools-techniques-energy-modelling/">Applying Programming Tools & Techniques to Energy Modelling</a>
+											<span class="post-date">August 8, 2014</span>
+									</li>
+											<li>
+					<a href="https://mindfulmodeller.ca/new-job-new-city-6000-km/">New Job, New City and 6,000 km</a>
+											<span class="post-date">April 19, 2014</span>
+									</li>
+					</ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul><li><a href="https://mindfulmodeller.ca/2015/05/">May 2015</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/11/">November 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/10/">October 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/08/">August 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2014/04/">April 2014</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/06/">June 2013</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/03/">March 2013</a></li>
+	<li><a href="https://mindfulmodeller.ca/2013/01/">January 2013</a></li>
+		</ul></aside><aside id="blog_subscription-2" class="widget widget_blog_subscription jetpack_subscription_widget"><h3 class="widget-title">Subscribe to Blog via Email</h3>
+            <form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+				                    <div id="subscribe-text"><p>Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
+</div><p>Join 43 other subscribers</p>
+                    <p id="subscribe-email">
+                        <label id="jetpack-subscribe-label" class="screen-reader-text" for="subscribe-field-blog_subscription-2">
+							Email Address                        </label>
+                        <input type="email" name="email" required="required" class="required" value="" id="subscribe-field-blog_subscription-2" placeholder="Email Address"></p>
+
+                    <p id="subscribe-submit">
+                        <input type="hidden" name="action" value="subscribe"><input type="hidden" name="source" value="https://mindfulmodeller.ca/version-control-for-energy-models/"><input type="hidden" name="sub-type" value="widget"><input type="hidden" name="redirect_fragment" value="blog_subscription-2"><button type="submit" name="jetpack_subscriptions_widget">
+	                        Subscribe                        </button>
+                    </p>
+				            </form>
+		
+</aside><aside id="custommetawidget-2" class="widget customMetaWidget"><h3 class="widget-title">Links</h3>		<ul><li><a rel="nofollow" href="https://mindfulmodeller.ca/wp-login.php">Log in</a></li>
+		
+					<li><a href="https://mindfulmodeller.ca/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+		
+
+		
+			<li><a href="https://mindfulmodeller.ca/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+		
+				</ul></aside></div>
+		</div>
+	<footer id="colophon" role="contentinfo"><div class="site-info">
+									<a href="https://en-ca.wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div>
+	</footer></div>
+
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/mindfulmodeller.ca\/version-control-for-energy-models\/":343};
+	</script><script type="text/javascript" src="https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201915"></script><script type="text/javascript" src="https://mindfulmodeller.ca/wp-content/themes/twentytwelve/js/navigation.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script><script type="text/javascript" src="https://c0.wp.com/p/jetpack/7.2.1/_inc/build/sharedaddy/sharing.min.js"></script><script type="text/javascript">
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+</script><script type="text/javascript" src="https://stats.wp.com/e-201915.js" async="async" defer></script><script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.2.1',blog:'44886349',post:'343',tz:'-7',srv:'mindfulmodeller.ca'} ]);
+	_stq.push([ 'clickTrackerInit', '44886349', '343' ]);
+</script></body></html>
